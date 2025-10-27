@@ -1,0 +1,138 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Aviation Liquid Glass Design System
+Corporate Color: #3182C2 (HSL: 201 61% 47%)
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Aviation blue color palette */
+    --background: 0 0% 98%;
+    --foreground: 210 20% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 20% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 20% 12%;
+
+    /* Primary: Corporate Aviation Blue #3182C2 */
+    --primary: 201 61% 47%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 201 61% 57%;
+
+    /* Secondary: Light aviation gray */
+    --secondary: 210 15% 92%;
+    --secondary-foreground: 210 20% 12%;
+
+    /* Muted tones */
+    --muted: 210 15% 93%;
+    --muted-foreground: 210 10% 42%;
+
+    /* Accent: Bright aviation blue */
+    --accent: 201 61% 47%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 210 15% 88%;
+    --input: 210 15% 88%;
+    --ring: 201 61% 47%;
+
+    --radius: 0.75rem;
+
+    /* Liquid glass effects */
+    --glass-bg: 255 255 255 / 0.05;
+    --glass-border: 201 61% 47% / 0.2;
+    --glass-shadow: 0 8px 32px 0 rgba(49, 130, 194, 0.15);
+    --glass-shadow-hover: 0 12px 48px 0 rgba(49, 130, 194, 0.25);
+
+    /* Liquid gradients */
+    --gradient-liquid: linear-gradient(135deg, hsl(201 61% 47%) 0%, hsl(201 61% 57%) 50%, hsl(201 61% 47%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(201 61% 47% / 0.95) 0%, hsl(201 61% 37% / 0.85) 100%);
+    --gradient-glow: radial-gradient(circle at 50% 50%, hsl(201 61% 57% / 0.3) 0%, transparent 70%);
+    
+    /* Enhanced shadows */
+    --shadow-strong: 0 10px 40px -10px hsl(201 61% 47% / 0.3), 0 0 20px -5px hsl(201 61% 57% / 0.2);
+    --shadow-card: 0 4px 16px -4px hsl(201 61% 47% / 0.12), 0 0 8px -2px hsl(201 61% 57% / 0.08);
+    --shadow-glow: 0 0 30px hsl(201 61% 57% / 0.4), 0 0 60px hsl(201 61% 57% / 0.2);
+    
+    /* Transitions */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-glow: box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 210 20% 8%;
+    --foreground: 0 0% 98%;
+
+    --card: 210 20% 12%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 210 20% 12%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 201 61% 47%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 201 61% 57%;
+
+    --secondary: 210 15% 18%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 210 15% 18%;
+    --muted-foreground: 210 10% 65%;
+
+    --accent: 201 61% 47%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 210 15% 22%;
+    --input: 210 15% 22%;
+    --ring: 201 61% 47%;
+    
+    --glass-bg: 0 0 0 / 0.3;
+    --glass-border: 201 61% 47% / 0.3;
+  }
+}
+
+/* Liquid Glass Utility Classes */
+@layer components {
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-md border border-white/10 shadow-[0_8px_32px_0_rgba(49,130,194,0.15)];
+  }
+  
+  .glass-morphism {
+    @apply bg-white/10 backdrop-blur-xl border border-primary/20 shadow-[0_8px_32px_0_rgba(49,130,194,0.2)] 
+           hover:shadow-[0_12px_48px_0_rgba(49,130,194,0.3)] transition-all duration-300;
+  }
+  
+  .liquid-gradient {
+    background: linear-gradient(135deg, hsl(201 61% 47%) 0%, hsl(201 61% 57%) 50%, hsl(201 61% 47%) 100%);
+    background-size: 200% 200%;
+    animation: liquid-flow 8s ease infinite;
+  }
+  
+  .aviation-glow {
+    @apply shadow-[0_0_30px_rgba(49,130,194,0.4),0_0_60px_rgba(49,130,194,0.2)];
+  }
+  
+  .aviation-glow-hover {
+    @apply hover:shadow-[0_0_40px_rgba(49,130,194,0.5),0_0_80px_rgba(49,130,194,0.3)] transition-all duration-300;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
