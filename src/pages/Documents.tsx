@@ -38,9 +38,9 @@ const Documents = () => {
     {
       titleKey: "docs.doc5.title",
       descKey: "docs.doc5.desc",
-      icon: Shield,
+      icon: Award,
       categoryKey: "docs.cat.certificates",
-      file: "/documents/certificate-2018.pdf",
+      file: "/documents/certificate-conformity.pdf",
     },
     {
       titleKey: "docs.doc6.title",
@@ -60,8 +60,22 @@ const Documents = () => {
       titleKey: "docs.doc8.title",
       descKey: "docs.doc8.desc",
       icon: Fuel,
-      categoryKey: "docs.cat.services",
-      file: "/documents/services-2018.pdf",
+      categoryKey: "docs.cat.certificates",
+      file: "/documents/certificate-auto.pdf",
+    },
+    {
+      titleKey: "docs.doc9.title",
+      descKey: "docs.doc9.desc",
+      icon: Shield,
+      categoryKey: "docs.cat.licenses",
+      file: "/documents/aviation-license.pdf",
+    },
+    {
+      titleKey: "docs.doc10.title",
+      descKey: "docs.doc10.desc",
+      icon: Award,
+      categoryKey: "docs.cat.certificates",
+      file: "/documents/certificate-gost-iso-2024.pdf",
     },
   ];
 
