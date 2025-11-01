@@ -2,6 +2,7 @@ import { ArrowRight, Shield, Wrench, Zap, Award, Users, Clock, UserCog, Cog } fr
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
+import PartnersCarousel from "@/components/PartnersCarousel";
 import heroImage from "@/assets/hero-aircraft-hangar.jpg";
 import facilityImage from "@/assets/fuel-service-operations.jpg";
 
@@ -115,6 +116,19 @@ const Home = () => {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Partners Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-card/50">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-foreground mb-3 tracking-tight">
+            {t('home.partners.title')}
+          </h2>
+          <p className="text-center text-muted-foreground mb-12 text-base">
+            {t('home.partners.subtitle')}
+          </p>
+          <PartnersCarousel />
         </div>
       </section>
 
