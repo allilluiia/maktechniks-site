@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
-import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
+import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext, type CarouselApi } from "@/components/ui/carousel";
 import { X } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useEffect } from "react";
 import fuelTruck1 from "@/assets/fuel-truck-1.jpg";
 import fuelEquipment2 from "@/assets/fuel-equipment-2.jpg";
 import aircraftRefueling3 from "@/assets/aircraft-refueling-3.jpg";
@@ -22,6 +23,18 @@ const photos = [
 const PhotoCarousel = () => {
   const { t } = useLanguage();
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [api, setApi] = useState<CarouselApi>();
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    if (!api) return;
+
+    setCurrent(api.selectedScrollSnap());
+
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap());
+    });
+  }, [api]);
 
   const handleImageClick = (src: string) => {
     setSelectedImage(src);
@@ -43,6 +56,7 @@ const PhotoCarousel = () => {
               loop: true,
               align: "center",
             }}
+            setApi={setApi}
             className="w-full"
           >
             <CarouselContent className="-ml-8">
@@ -68,6 +82,22 @@ const PhotoCarousel = () => {
             <CarouselPrevious className="hidden lg:flex" />
             <CarouselNext className="hidden lg:flex" />
           </Carousel>
+          
+          {/* Dot indicators for mobile and tablet */}
+          <div className="flex justify-center gap-2 mt-6 lg:hidden">
+            {photos.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => api?.scrollTo(index)}
+                className={`h-2 rounded-full transition-all ${
+                  index === current 
+                    ? "w-8 bg-primary" 
+                    : "w-2 bg-muted-foreground/30"
+                }`}
+                aria-label={`Перейти к фото ${index + 1}`}
+              />
+            ))}
+          </div>
         </div>
       </section>
 
