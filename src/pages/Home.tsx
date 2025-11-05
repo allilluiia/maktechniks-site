@@ -1,10 +1,11 @@
-import { ArrowRight, Shield, Wrench, Zap, Award, Users, Clock, UserCog, Cog } from "lucide-react";
+import { ArrowRight, Shield, Wrench, Zap, Award, Users, Clock, Cog, CheckCircle, Settings, Plane } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import PartnersCarousel from "@/components/PartnersCarousel";
-import heroImage from "@/assets/hero-aircraft-hangar.jpg";
+import PhotoCarousel from "@/components/PhotoCarousel";
 import facilityImage from "@/assets/fuel-service-operations.jpg";
+import logoImage from "@/assets/logo.png";
 
 const Home = () => {
   const { t } = useLanguage();
@@ -15,36 +16,69 @@ const Home = () => {
     { icon: Wrench, title: t("home.adv3.title"), description: t("home.adv3.desc") },
     { icon: Award, title: t("home.adv4.title"), description: t("home.adv4.desc") },
     { icon: Users, title: t("home.adv5.title"), description: t("home.adv5.desc") },
-    { icon: UserCog, title: t("home.adv6.title"), description: t("home.adv6.desc") },
+    { icon: Cog, title: t("home.adv6.title"), description: t("home.adv6.desc") },
   ];
 
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${heroImage})` }}
-        >
-          <div className="absolute inset-0 liquid-gradient opacity-85" />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-transparent to-background/60" />
-        </div>
-        
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="glass-morphism p-12 rounded-3xl animate-fade-in-up backdrop-blur-2xl">
-            <UserCog className="h-16 w-16 text-primary mx-auto mb-6 animate-float" />
-            <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-4 tracking-tight">
-              {t("home.hero.title")}
-            </h1>
-            <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-              {t("home.hero.subtitle")}
-            </p>
-            <Link to="/contacts">
-              <Button size="lg" variant="default" className="group shadow-lg aviation-glow-hover">
-                {t("home.hero.cta")}
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-            </Link>
+      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden" style={{ background: 'linear-gradient(to bottom, #f3f7fb, #ffffff)' }}>
+        <div className="relative z-10 max-w-5xl mx-auto px-8 sm:px-6 lg:px-8 text-center pt-32 pb-20">
+          <div className="space-y-8 md:space-y-10">
+            {/* Logo */}
+            <div className="animate-fade-in flex justify-center">
+              <img 
+                src={logoImage} 
+                alt="МакТехникс" 
+                className="h-16 md:h-20 lg:h-24 w-auto"
+              />
+            </div>
+            
+            {/* Tagline */}
+            <div className="animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
+              <p className="text-xs md:text-sm tracking-[0.3em] text-muted-foreground uppercase font-medium">
+                {t("home.hero.tagline")}
+              </p>
+            </div>
+
+            {/* Main Title */}
+            <div className="animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight max-w-4xl mx-auto">
+                {t("home.hero.title")}
+              </h1>
+            </div>
+
+            {/* Buttons */}
+            <div className="flex flex-wrap justify-center gap-4 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+              <Link to="/contacts">
+                <Button size="lg" variant="default" className="group px-8">
+                  {t("home.hero.cta")}
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
+              <Link to="/documents">
+                <Button size="lg" variant="outline" className="group px-8">
+                  {t("home.hero.docs")}
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
+            </div>
+
+            {/* Features */}
+            <div className="flex flex-wrap justify-center gap-8 pt-8 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+              <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                <Zap className="h-4 w-4" />
+                <span>{t("home.hero.feature1")}</span>
+              </div>
+              <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                <CheckCircle className="h-4 w-4" />
+                <span>{t("home.hero.feature2")}</span>
+              </div>
+              <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                <Settings className="h-4 w-4" />
+                <span>{t("home.hero.feature3")}</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -87,6 +121,9 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* Photo Gallery */}
+      <PhotoCarousel />
 
       {/* Advantages Grid */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-background">

@@ -41,9 +41,14 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.contacts': 'Контакты',
     
     // Home page
-    'home.hero.title': 'Техническое обслуживание и ремонт',
+    'home.hero.tagline': 'ТЕХНИЧЕСКОЕ ОБСЛУЖИВАНИЕ И РЕМОНТ',
+    'home.hero.title': 'Профессиональный сервис оборудования ГСМ, ЦЗС и топливозаправочных систем',
     'home.hero.subtitle': 'Оборудование складов ГСМ, ЦЗС и топливозаправочная техника',
     'home.hero.cta': 'Получить консультацию',
+    'home.hero.docs': 'Перейти к документам',
+    'home.hero.feature1': 'Полный цикл ТОиР',
+    'home.hero.feature2': 'Сертифицированные специалисты',
+    'home.hero.feature3': 'Выездное обслуживание',
     'home.about.title': 'О МакТехникс',
     'home.about.p1': 'ООО «МакТехникс» основана в 2015 году. Компания оказывает качественные услуги по техническому обслуживанию и ремонту (ТОиР) оборудования складов ГСМ, ЦЗС и топливозаправочной техники.',
     'home.about.p2': 'Осуществляем ремонт автоцистерн, спецтехники коммунального назначения. Мы предлагаем услуги по обслуживанию и проведению ремонта на базе заказчика.',
@@ -68,6 +73,8 @@ const translations: Record<Language, Record<string, string>> = {
     'home.cta.title': 'Готовы начать проект?',
     'home.cta.text': 'Свяжитесь с нами сегодня для консультации и узнайте, как мы можем помочь с техническим обслуживанием вашего оборудования.',
     'home.cta.button': 'Связаться с нами',
+    'home.gallery.title': 'Создавая качество',
+    'home.gallery.subtitle': 'Качество, созданное опытом и вниманием к деталям',
     
     // Service page
     'service.title': 'Сервис и гарантия',
@@ -155,9 +162,14 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.contacts': 'Contacts',
     
     // Home page
-    'home.hero.title': 'Maintenance and Repair',
+    'home.hero.tagline': 'MAINTENANCE AND REPAIR',
+    'home.hero.title': 'Professional service for fuel storage equipment, refueling stations and fuel systems',
     'home.hero.subtitle': 'Fuel storage equipment, CZS and refueling equipment',
     'home.hero.cta': 'Get Consultation',
+    'home.hero.docs': 'View Documents',
+    'home.hero.feature1': 'Full maintenance cycle',
+    'home.hero.feature2': 'Certified specialists',
+    'home.hero.feature3': 'On-site service',
     'home.about.title': 'About MakTechniks',
     'home.about.p1': 'MakTechniks LLC was founded in 2015. The company provides quality services for maintenance and repair of fuel storage equipment, CZS and refueling equipment.',
     'home.about.p2': 'We repair tank trucks and municipal special equipment. We offer on-site maintenance and repair services at the customer\'s facility.',
@@ -182,6 +194,8 @@ const translations: Record<Language, Record<string, string>> = {
     'home.cta.title': 'Ready to Start a Project?',
     'home.cta.text': 'Contact us today for consultation and learn how we can help with your equipment maintenance.',
     'home.cta.button': 'Contact Us',
+    'home.gallery.title': 'Creating Quality',
+    'home.gallery.subtitle': 'Quality created through experience and attention to detail',
     
     // Service page
     'service.title': 'Service & Warranty',
@@ -269,9 +283,14 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.contacts': 'Kontakte',
     
     // Home page
-    'home.hero.title': 'Wartung und Reparatur',
+    'home.hero.tagline': 'WARTUNG UND REPARATUR',
+    'home.hero.title': 'Professioneller Service für Kraftstoffanlagen, Tankstellen und Betankungssysteme',
     'home.hero.subtitle': 'Kraftstoffanlagen, CZS und Betankungsausrüstung',
     'home.hero.cta': 'Beratung erhalten',
+    'home.hero.docs': 'Dokumente ansehen',
+    'home.hero.feature1': 'Vollständiger Wartungszyklus',
+    'home.hero.feature2': 'Zertifizierte Spezialisten',
+    'home.hero.feature3': 'Vor-Ort-Service',
     'home.about.title': 'Über MakTechniks',
     'home.about.p1': 'MakTechniks LLC wurde 2015 gegründet. Das Unternehmen bietet qualitativ hochwertige Dienstleistungen für Wartung und Reparatur von Kraftstoffanlagen, CZS und Betankungsausrüstung.',
     'home.about.p2': 'Wir reparieren Tankwagen und kommunale Spezialausrüstung. Wir bieten Wartungs- und Reparaturdienstleistungen vor Ort beim Kunden an.',
@@ -296,6 +315,8 @@ const translations: Record<Language, Record<string, string>> = {
     'home.cta.title': 'Bereit, ein Projekt zu starten?',
     'home.cta.text': 'Kontaktieren Sie uns heute für eine Beratung und erfahren Sie, wie wir bei der Wartung Ihrer Ausrüstung helfen können.',
     'home.cta.button': 'Kontaktieren Sie uns',
+    'home.gallery.title': 'Qualität schaffen',
+    'home.gallery.subtitle': 'Qualität durch Erfahrung und Liebe zum Detail',
     
     // Service page
     'service.title': 'Service & Garantie',
@@ -383,9 +404,14 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.contacts': '联系方式',
     
     // Home page
-    'home.hero.title': '维护与维修',
+    'home.hero.tagline': '技术维护与修理',
+    'home.hero.title': '燃料储存设备、加油站和燃料系统的专业服务',
     'home.hero.subtitle': '燃料储存设备、CZS和加油设备',
     'home.hero.cta': '获取咨询',
+    'home.hero.docs': '查看文件',
+    'home.hero.feature1': '完整维护周期',
+    'home.hero.feature2': '认证专家',
+    'home.hero.feature3': '现场服务',
     'home.about.title': '关于MakTechniks',
     'home.about.p1': 'MakTechniks有限责任公司成立于2015年。公司为燃料储存设备、CZS和加油设备的维护和维修提供优质服务。',
     'home.about.p2': '我们维修油罐车和市政专用设备。我们提供客户现场的维护和维修服务。',
@@ -410,6 +436,8 @@ const translations: Record<Language, Record<string, string>> = {
     'home.cta.title': '准备开始项目？',
     'home.cta.text': '立即联系我们进行咨询，了解我们如何帮助您进行设备维护。',
     'home.cta.button': '联系我们',
+    'home.gallery.title': '创造品质',
+    'home.gallery.subtitle': '以经验和对细节的关注创造品质',
     
     // Service page
     'service.title': '服务与保修',

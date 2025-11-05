@@ -96,6 +96,11 @@ export default {
           "0%, 100%": { transform: "translateY(0px)" },
           "50%": { transform: "translateY(-10px)" },
         },
+        "shimmer": {
+          "0%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
+          "100%": { backgroundPosition: "0% 50%" },
+        },
         "glow-pulse": {
           "0%, 100%": { 
             boxShadow: "0 0 20px rgba(49, 130, 194, 0.3), 0 0 40px rgba(49, 130, 194, 0.1)" 
@@ -114,6 +119,7 @@ export default {
         "liquid-flow": "liquid-flow 8s ease infinite",
         "glass-shimmer": "glass-shimmer 3s linear infinite",
         "float": "float 3s ease-in-out infinite",
+        "shimmer": "shimmer 6s ease-in-out infinite",
         "glow-pulse": "glow-pulse 2s ease-in-out infinite",
       },
       fontFamily: {
